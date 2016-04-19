@@ -1,0 +1,20 @@
+{
+    "arch": "arm",
+    "cpu": "cortex-m3",
+    "disable-redzone": true,
+    "executables": true,
+    "llvm-target": "thumbv7m-none-eabi",
+    "morestack": false,
+    "os": "none",
+    "relocation-model": "static",
+    "target-endian": "little",
+    "target-pointer-width": "32",
+    "no-compiler-rt": true,
+    "pre-link-args": [
+        "-mcpu=cortex-m3", "-mthumb",
+        "-Tlayout.ld"
+    ],
+    "post-link-args": [
+        "-lm", "-lgcc", "-lnosys"
+    ]
+}
